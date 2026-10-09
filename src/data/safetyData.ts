@@ -1,4 +1,4 @@
-import { AreaSafety, WeatherTrafficInfo } from '../types';
+﻿import { AreaSafety, WeatherTrafficInfo } from '../types';
 
 export const PUNE_AREAS_SAFETY: AreaSafety[] = [
   {
@@ -96,10 +96,10 @@ export const PUNE_AREAS_SAFETY: AreaSafety[] = [
 export const EMERGENCY_CONTACTS = [
   { name: 'National Emergency Response', number: '112', type: 'All-in-One Helpline', available: '24x7' },
   { name: 'Pune City Police Control', number: '100 / 020-2612 6296', type: 'Police', available: '24x7' },
-  { name: 'Women�s Distress Helpline', number: '1091', type: 'Women Safety', available: '24x7 Dedicated' },
+  { name: "Women's Distress Helpline", number: '1091', type: 'Women Safety', available: '24x7 Dedicated' },
   { name: 'Medical Emergency Ambulance', number: '108', type: 'Health / Trauma', available: '24x7 Free Service' },
   { name: 'Senior Citizen Support', number: '1090', type: 'Elder Care', available: '24x7' },
-  { name: 'Pune Traffic Control Room', number: '020-2668 5000', type: 'Traffic / Towing', available: '6 AM � 11 PM' }
+  { name: 'Pune Traffic Control Room', number: '020-2668 5000', type: 'Traffic / Towing', available: '6 AM – 11 PM' }
 ];
 
 export const SIMULATED_WEATHER_TRAFFIC: WeatherTrafficInfo = {
