@@ -1,4 +1,4 @@
-import { Place } from '../types';
+﻿import { Place } from '../types';
 
 export const PUNE_PLACES: Place[] = [
   {
@@ -9,9 +9,14 @@ export const PUNE_PLACES: Place[] = [
     description: 'Built in 1732, Shaniwar Wada was the historic seat of the Peshwa rulers. Known for its massive Delhi Darwaza, spiked teak doors, fountain ruins, and dramatic history.',
     locality: 'Bajirao Road, Shaniwar Peth',
     address: 'Shaniwar Peth, Pune, Maharashtra 411030',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/shaniwar-wada.jpg',
+    imageAttribution: {
+      author: 'Swapnil99n49',
+      license: 'CC BY-SA 3.0',
+      source: 'Wikimedia Commons (Entrance of Shaniwar Wada, Pune)'
+    },
     affordabilityScore: 1,
-    costEstimate: '?25 (Indian Citizens) / ?300 (Foreigners)',
+    costEstimate: '₹25 (Indian Citizens) / ₹300 (Foreigners)',
     cleanlinessRating: 4.1,
     userRating: 4.4,
     reviewCount: 28400,
@@ -23,7 +28,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: false,
       publicTransitNote: 'Easily accessible via PMPML buses to Shaniwar Wada stop and Pune Metro.'
     },
-    timings: '8:00 AM � 6:30 PM (Light & Sound Show in evening)',
+    timings: '8:00 AM – 6:30 PM (Light & Sound Show in evening)',
     bestTimeToVisit: 'October to February, late afternoon',
     highlights: ['Delhi Gate with iron spikes', 'Lush inner gardens', 'Peshwa stone foundations', 'Evening light & sound show'],
     safetyTips: ['Keep valuables close during busy weekend afternoons', 'Authorized ticket counters are at the main gate', 'Well-patrolled heritage zone']
@@ -36,9 +41,14 @@ export const PUNE_PLACES: Place[] = [
     description: 'Built in 1892 by Sultan Muhammed Shah Aga Khan III to aid famine-hit villagers, this majestic palace served as the internment site of Mahatma Gandhi, Kasturba Gandhi, and Mahadev Desai during the Quit India Movement.',
     locality: 'Kalyani Nagar / Yerawada',
     address: 'Pune-Ahmednagar Highway, Kalyani Nagar, Pune 411014',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/aga-khan-palace.jpg',
+    imageAttribution: {
+      author: 'Khushroo Cooper',
+      license: 'CC BY-SA 2.0',
+      source: 'Wikimedia Commons (Pune Palace)'
+    },
     affordabilityScore: 1,
-    costEstimate: '?25 (Indians) / ?100 (Foreigners)',
+    costEstimate: '₹25 (Indians) / ₹100 (Foreigners)',
     cleanlinessRating: 4.8,
     userRating: 4.6,
     reviewCount: 19800,
@@ -50,22 +60,27 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Directly on the main Nagar Road bus route and 5-min walk from Metro.'
     },
-    timings: '9:00 AM � 5:30 PM (Open all days)',
+    timings: '9:00 AM – 5:30 PM (Open all days)',
     bestTimeToVisit: 'Morning or late afternoon, peaceful year-round',
     highlights: ['Gandhian photo gallery & artifacts', 'Sprawling manicured Italian lawns', 'Kasturba Gandhi Memorial Samadhi', 'Tranquil ambiance'],
     safetyTips: ['Very quiet, well-guarded archaeological site', 'Family-friendly and tourist-safe', 'Follow photography rules inside memorial rooms']
   },
   {
     id: 'sinhagad-fort',
-    name: 'Sinhagad Fort (Lion�s Fort)',
+    name: 'Sinhagad Fort (Lion’s Fort)',
     category: 'historical',
     tagline: 'Dramatic Sahyadri clifftop citadel with legendary Maratha lore',
     description: 'Perched 1,312 meters above sea level in the Sahyadris, Sinhagad witnessed the heroic 1670 battle led by Tanaji Malusare. A favorite trek for Punekars, celebrated for cool breezes and piping hot pitla-bhakri.',
     locality: 'Sinhagad Ghat Road',
     address: 'Sinhagad Ghat Rd, Thoptewadi, Maharashtra 411025',
-    image: 'https://images.unsplash.com/photo-1626014303757-64673236e780?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/sinhagad-fort.jpg',
+    imageAttribution: {
+      author: 'Suraj Digrase',
+      license: 'CC0 Public Domain',
+      source: 'Wikimedia Commons (Sinhagad Fort 49146)'
+    },
     affordabilityScore: 2,
-    costEstimate: '?50 vehicle entry + ?100-200 for food',
+    costEstimate: '₹50 vehicle entry + ₹100-200 for food',
     cleanlinessRating: 3.9,
     userRating: 4.7,
     reviewCount: 42100,
@@ -76,8 +91,8 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'PMPML buses run from Swargate to Sinhagad Foothills (Paiytha); shared jeeps available to the top.'
     },
-    timings: '5:00 AM � 6:00 PM',
-    bestTimeToVisit: 'Monsoon (July�Sept) for mist, or early winter mornings',
+    timings: '5:00 AM – 6:00 PM',
+    bestTimeToVisit: 'Monsoon (July–Sept) for mist, or early winter mornings',
     highlights: ['Authentic Kanda Bhaji & Pitla Bhakri', 'Tanaji Malusare Memorial', 'Kalyan Darwaza & steep cliff views', 'Khadakwasla Dam panoramic overlook'],
     safetyTips: ['Steep winding ghat road; drive carefully during monsoon', 'Avoid leaning over unprotected cliff edges', 'Descend before dark as ghats lack street lighting']
   },
@@ -86,12 +101,17 @@ export const PUNE_PLACES: Place[] = [
     name: 'Fergusson College (FC) Road Hub',
     category: 'food',
     tagline: 'Vibrant student artery, street food haven, and retail street',
-    description: 'The pulsating youth heartbeat of Pune. Lined with legendary bakeries, college canteens, Maharashtrian snack joints (Sabudana Vada, SPDP), bookstore stalls, and affordable street fashion.',
+    description: 'The pulsating youth heartbeat of Pune. Lined with legendary bakeries, college canteens, Maharashtrian snack joints (Sabudana Vada, Dahi Misal Pav, SPDP), bookstore stalls, and affordable street fashion.',
     locality: 'Shivaji Nagar / Deccan',
     address: 'Fergusson College Road, Deccan Gymkhana, Pune 411004',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/fc-road-food-hub.jpg',
+    imageAttribution: {
+      author: 'Wikimedia Contributor',
+      license: 'CC BY-SA 4.0',
+      source: 'Wikimedia Commons (Pune Special - Dahi Misal Pav)'
+    },
     affordabilityScore: 1,
-    costEstimate: '?50 � ?250 per person',
+    costEstimate: '₹50 – ₹250 per person',
     cleanlinessRating: 4.0,
     userRating: 4.7,
     reviewCount: 35000,
@@ -103,9 +123,9 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: false,
       publicTransitNote: 'Pedestrian-friendly wide sidewalks; short walk from Deccan Metro.'
     },
-    timings: '10:00 AM � 11:00 PM',
-    bestTimeToVisit: 'Evenings (5:00 PM � 9:00 PM) for buzzing street vibes',
-    highlights: ['Vaishali & Cafe Goodluck nearby', 'Affordable street shopping', 'Hot SPDP (Sev Potato Dahi Puri)', 'Bookstalls & vibrant cafe culture'],
+    timings: '10:00 AM – 11:00 PM',
+    bestTimeToVisit: 'Evenings (5:00 PM – 9:00 PM) for buzzing street vibes',
+    highlights: ['Vaishali & Cafe Goodluck nearby', 'Affordable street shopping', 'Hot Dahi Misal & SPDP', 'Bookstalls & vibrant cafe culture'],
     safetyTips: ['Keep handbags zipped in crowded pedestrian sections', 'High police patrol presence and brightly lit at night', 'Safe for solo women travelers']
   },
   {
@@ -113,12 +133,17 @@ export const PUNE_PLACES: Place[] = [
     name: 'Cafe Goodluck',
     category: 'food',
     tagline: 'Legendary 1935 Irani cafe known for Bun Maska and Chai',
-    description: 'One of Pune�s oldest Irani cafes, established in 1935. Celebrated for its melt-in-mouth Bun Maska, Irani Chai, Keema Pav, caramel custard, and timeless marble-topped heritage tables.',
+    description: 'One of Pune’s oldest Irani cafes, established in 1935. Celebrated for its melt-in-mouth Bun Maska, Irani Chai, Keema Pav, caramel custard, and timeless marble-topped heritage tables.',
     locality: 'Deccan Gymkhana',
     address: 'Fergusson College Rd, Near Goodluck Chowk, Deccan, Pune 411004',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/cafe-goodluck.jpg',
+    imageAttribution: {
+      author: 'Bhuppigraphy',
+      license: 'CC BY-SA 4.0',
+      source: 'Wikimedia Commons (Chai bun maska - Irani cafe, Pune)'
+    },
     affordabilityScore: 2,
-    costEstimate: '?100 � ?300 per person',
+    costEstimate: '₹100 – ₹300 per person',
     cleanlinessRating: 4.3,
     userRating: 4.5,
     reviewCount: 22100,
@@ -130,22 +155,27 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: false,
       publicTransitNote: 'Located right at Goodluck Chowk with high transit accessibility.'
     },
-    timings: '7:30 AM � 11:30 PM',
+    timings: '7:30 AM – 11:30 PM',
     bestTimeToVisit: 'Early morning for breakfast, or late night chai',
     highlights: ['Bun Maska & Special Irani Chai', 'Mutton Keema Pav', 'Caramel Custard', 'Celebrity memorabilia & vintage vibe'],
     safetyTips: ['Expect a 10-15 min queue during peak breakfast hours', 'Safe and welcoming neighborhood at all open hours']
   },
   {
     id: 'koregaon-park-lane7',
-    name: 'Koregaon Park (Lane 7 & High Street)',
+    name: 'Koregaon Park (Lane 7 & Osho Gardens)',
     category: 'attraction',
-    tagline: 'Tree-canopied cosmopolitan district with artisan cafes and boutiques',
-    description: 'A verdant, high-energy neighborhood filled with upscale dining, indie roasteries, craft breweries, boutique fashion, and tranquil Osho garden walks under giant banyan trees.',
+    tagline: 'Tree-canopied cosmopolitan district with artisan cafes and Osho gardens',
+    description: 'A verdant, high-energy neighborhood filled with upscale dining, indie roasteries, tranquil zen gardens (Osho Teerth Park), craft bakeries, and scenic tree-lined walking avenues under giant banyans.',
     locality: 'Koregaon Park',
     address: 'North Main Road & Lane 7, Koregaon Park, Pune 411001',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/koregaon-park-lane7.jpg',
+    imageAttribution: {
+      author: 'Wikimedia Contributor',
+      license: 'CC BY-SA 3.0',
+      source: 'Wikimedia Commons (Osho Garden, Koregaon Park, Pune)'
+    },
     affordabilityScore: 4,
-    costEstimate: '?500 � ?1,800 per person',
+    costEstimate: '₹500 – ₹1,800 per person',
     cleanlinessRating: 4.7,
     userRating: 4.8,
     reviewCount: 29500,
@@ -156,7 +186,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Cabs/Autos widely available; 10 mins from Pune Railway Station.'
     },
-    timings: 'Open 24 hours (Retail & Cafes: 10:00 AM � 1:00 AM)',
+    timings: 'Open 24 hours (Retail & Cafes: 10:00 AM – 1:00 AM)',
     bestTimeToVisit: 'Evenings and weekend brunches',
     highlights: ['Artisan specialty coffee shops', 'Global gastropubs & bakeries', 'Scenic tree-lined walking avenues', 'Live music venues'],
     safetyTips: ['Active nightlife with dedicated security patrols', 'Beware of sporadic traffic at narrow lane intersections', 'Night rides via verified ride apps recommended']
@@ -166,10 +196,15 @@ export const PUNE_PLACES: Place[] = [
     name: 'Vetal Tekdi (ARAI Hill)',
     category: 'budget',
     tagline: 'Highest natural peak within city limits and morning bird haven',
-    description: 'Rising to 2,600 feet, Vetal Tekdi is Pune�s premier urban green lung. Offers sweeping 360-degree skyline views, sunrise jogging trails, peacocks, migratory birds, and the famous stone quarry lake.',
+    description: 'Rising to 2,600 feet, Vetal Tekdi is Pune’s premier urban green lung. Offers sweeping 360-degree skyline views, sunrise jogging trails, peacocks, migratory birds, and the famous stone quarry lake.',
     locality: 'Kothrud / Paud Road',
     address: 'Near ARAI, Paud Road / Senapati Bapat Road, Pune 411038',
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/vetal-tekdi.jpg',
+    imageAttribution: {
+      author: 'Pakshya',
+      license: 'CC BY-SA 3.0',
+      source: 'Wikimedia Commons (Vetal Tekdi, Pune)'
+    },
     affordabilityScore: 1,
     costEstimate: 'Free Entry',
     cleanlinessRating: 4.4,
@@ -183,8 +218,8 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Parking at ARAI gate; auto rickshaws readily available at base.'
     },
-    timings: '5:30 AM � 7:30 PM (Best in daylight)',
-    bestTimeToVisit: 'Sunrise (6:00 AM � 8:30 AM) or sunset',
+    timings: '5:30 AM – 7:30 PM (Best in daylight)',
+    bestTimeToVisit: 'Sunrise (6:00 AM – 8:30 AM) or sunset',
     highlights: ['Panoramic Pune cityscape view', 'Quarry lake backdrop', 'Peacocks & morning birdwatching', 'Fresh hill breeze & fitness trails'],
     safetyTips: ['Avoid isolated interior trails after sunset', 'Carry a water bottle as amenities on top are natural/minimal', 'Stay on designated main mud pathways']
   },
@@ -193,12 +228,17 @@ export const PUNE_PLACES: Place[] = [
     name: 'Phoenix Marketcity Pune',
     category: 'attraction',
     tagline: 'Mega lifestyle, entertainment, and shopping destination',
-    description: 'One of Western India�s largest shopping and entertainment complexes. Features 300+ global brands, IMAX cinemas, family entertainment zones, and 50+ diverse dining outlets.',
+    description: 'One of Western India’s largest shopping and entertainment complexes. Features 300+ global brands, IMAX cinemas, family entertainment zones, and 50+ diverse dining outlets in Viman Nagar.',
     locality: 'Viman Nagar',
     address: 'Viman Nagar Rd, Clover Park, Viman Nagar, Pune 411014',
-    image: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/phoenix-marketcity.jpg',
+    imageAttribution: {
+      author: 'DesiBoy101',
+      license: 'CC BY 4.0',
+      source: 'Wikimedia Commons (Phoenix Marketcity in Viman Nagar, Pune)'
+    },
     affordabilityScore: 3,
-    costEstimate: '?300 � ?2,500 per person',
+    costEstimate: '₹300 – ₹2,500 per person',
     cleanlinessRating: 4.9,
     userRating: 4.6,
     reviewCount: 52000,
@@ -210,7 +250,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Well connected by Metro Line 2 (Ramwadi Station) and Nagar Road BRT.'
     },
-    timings: '11:00 AM � 11:00 PM',
+    timings: '11:00 AM – 11:00 PM',
     bestTimeToVisit: 'Weekday afternoons for relaxed shopping, weekends for entertainment',
     highlights: ['IMAX theatre & bowling arena', 'Extensive multi-cuisine food court', 'Fully climate-controlled comfort', 'Wheelchair accessible elevators & ramps'],
     safetyTips: ['Round-the-clock mall security, emergency medical rooms on-site', 'Designated prepaid auto & cab pickup bays']
@@ -223,9 +263,15 @@ export const PUNE_PLACES: Place[] = [
     description: 'An upscale 5-star sanctuary adjacent to Kalyani Nagar and Pune Airport. Features open-air garden suites, Pan-Asian and Italian fine dining, revitalizing spa therapy, and premium business lounges.',
     locality: 'Kalyani Nagar',
     address: 'Adjacent to Aga Khan Palace, 88 Nagar Road, Kalyani Nagar, Pune 411006',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/hyatt-pune.svg',
+    imageAttribution: {
+      author: 'CityWise Editorial',
+      license: 'Verified Custom Vector Placeholder',
+      source: 'Clean branded placeholder shown in lieu of unverified stock photography',
+      isPlaceholder: true
+    },
     affordabilityScore: 5,
-    costEstimate: '?6,500 � ?12,000 per night',
+    costEstimate: '₹6,500 – ₹12,000 per night',
     cleanlinessRating: 4.9,
     userRating: 4.7,
     reviewCount: 8900,
@@ -247,12 +293,17 @@ export const PUNE_PLACES: Place[] = [
     name: 'Hotel Shreyas & Maharashtrian Dining',
     category: 'hotel',
     tagline: 'Classic cultural heritage hotel and authentic Thali destination',
-    description: 'Renowned for more than 50 years as Pune�s home of traditional Maharashtrian hospitality. Famous for its unlimited authentic Veg Maharashtrian Thali (Ukdiche Modak, Puran Poli, Alu Vadi) alongside comfortable budget rooms.',
+    description: 'Renowned for more than 50 years as Pune’s home of traditional Maharashtrian hospitality. Famous for its unlimited authentic Veg Maharashtrian Thali (Ukdiche Modak, Puran Poli, Alu Vadi) alongside comfortable budget rooms.',
     locality: 'Deccan Gymkhana / Apte Road',
     address: '1242, Apte Rd, Shivajinagar, Deccan Gymkhana, Pune 411004',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/hotel-shreyas.jpg',
+    imageAttribution: {
+      author: 'Advaitj11',
+      license: 'CC BY-SA 4.0',
+      source: 'Wikimedia Commons (Maharashtrian Thali 1)'
+    },
     affordabilityScore: 2,
-    costEstimate: '?350 � ?450 for Thali / ?2,200 � ?3,500 per night',
+    costEstimate: '₹350 – ₹450 for Thali / ₹2,200 – ₹3,500 per night',
     cleanlinessRating: 4.5,
     userRating: 4.5,
     reviewCount: 14200,
@@ -264,7 +315,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Conveniently situated in quiet central Deccan; close to JM Road.'
     },
-    timings: 'Thali: 11:30 AM � 3:00 PM & 7:30 PM � 10:30 PM',
+    timings: 'Thali: 11:30 AM – 3:00 PM & 7:30 PM – 10:30 PM',
     bestTimeToVisit: 'Festive seasons (Ganesh Utsav) & family Sunday lunch',
     highlights: ['Unlimited authentic Maharashtrian Thali', 'Traditional warm hospitality', 'Central city connectivity', 'Budget-friendly family stays'],
     safetyTips: ['Peaceful residential street, safe at night', 'Advance table booking suggested on Sunday lunch hours']
@@ -277,7 +328,12 @@ export const PUNE_PLACES: Place[] = [
     description: 'Commissioned by Sawai Madhavrao Peshwa in 1784, Saras Baug is a historic 25-acre park surrounding a picturesque lake with the revered Siddhivinayak Temple (Talyatla Ganpati). A peaceful oasis for families and seniors.',
     locality: 'Swargate / Sadashiv Peth',
     address: 'Saras Baug Road, Sadashiv Peth, Pune 411030',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/saras-baug.jpg',
+    imageAttribution: {
+      author: 'Wikimedia Contributor',
+      license: 'CC BY-SA 3.0',
+      source: 'Wikimedia Commons (Saras Bagh, Pune, India)'
+    },
     affordabilityScore: 1,
     costEstimate: 'Free Entry',
     cleanlinessRating: 4.2,
@@ -291,7 +347,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'Located 5 minutes from Swargate ST/Bus terminal and upcoming Metro.'
     },
-    timings: '6:00 AM � 9:00 PM',
+    timings: '6:00 AM – 9:00 PM',
     bestTimeToVisit: 'Early morning for temple darshan or evening for lawn strolls',
     highlights: ['Historic Peshwa Lake Temple', 'Choupati snack stalls outside', 'Shaded jogging pathways', 'Free public park access'],
     safetyTips: ['Outside entrance can be crowded in evenings', 'Well-patrolled municipal garden with family crowd']
@@ -304,9 +360,14 @@ export const PUNE_PLACES: Place[] = [
     description: 'The chief source of drinking water for Pune, situated 20 km from the core city. Known for its breezy lakeside promenade, sunset vistas over the Sahyadri mountains, and roadside bhutta (roasted corn) stalls.',
     locality: 'Khadakwasla / Sinhagad Road',
     address: 'Sinhagad Road, Khadakwasla Village, Pune 411024',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
+    image: '/images/places/khadakwasla-dam.jpg',
+    imageAttribution: {
+      author: 'Wikimedia Contributor',
+      license: 'CC BY-SA 3.0',
+      source: 'Wikimedia Commons (Khadakwasla Dam, Pune)'
+    },
     affordabilityScore: 1,
-    costEstimate: 'Free Entry (Street food ?50 � ?100)',
+    costEstimate: 'Free Entry (Street food ₹50 – ₹100)',
     cleanlinessRating: 3.8,
     userRating: 4.4,
     reviewCount: 26000,
@@ -317,7 +378,7 @@ export const PUNE_PLACES: Place[] = [
       parkingAvailable: true,
       publicTransitNote: 'PMPML buses run frequently from Swargate and Shanipar to Khadakwasla.'
     },
-    timings: 'Open 24 hours (Food stalls: 10:00 AM � 8:30 PM)',
+    timings: 'Open 24 hours (Food stalls: 10:00 AM – 8:30 PM)',
     bestTimeToVisit: 'Late afternoon during monsoon or golden hour sunset',
     highlights: ['Fresh roasted Bhutta & Kanda Bhaji', 'Scenic lakeside promenade', 'National Defence Academy (NDA) nearby', 'Budget family evening spot'],
     safetyTips: ['Do NOT venture deep into reservoir water; strong currents and slippery rocks', 'Heavy traffic on Sinhagad road on Sunday evenings']

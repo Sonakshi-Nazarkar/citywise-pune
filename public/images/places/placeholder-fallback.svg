@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+    <defs>
+      <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a"/>
+        <stop offset="100%" stop-color="#1e293b"/>
+      </linearGradient>
+    </defs>
+    <rect width="900" height="600" fill="url(#fbg)"/>
+    <circle cx="450" cy="240" r="60" fill="#334155" stroke="#475569" stroke-width="2"/>
+    <path d="M430 255 L445 230 L455 245 L465 235 L475 255 Z" fill="#94a3b8"/>
+    <circle cx="440" cy="225" r="5" fill="#f8fafc"/>
+    <text x="450" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#f8fafc" text-anchor="middle">Pune Landmark View</text>
+    <text x="450" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">CityWise • Explore Smart, Travel Safe</text>
+  </svg>

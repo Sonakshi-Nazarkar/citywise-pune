@@ -1,7 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 import { Place } from '../../types';
-import { X, Star, Shield, MapPin, Clock, Calendar, Check, Plus, Layers, Train, Accessibility, Car, AlertTriangle } from 'lucide-react';
+import { X, Star, Shield, MapPin, Clock, Calendar, Check, Layers, Train, Accessibility, Car, AlertTriangle, Camera, Info } from 'lucide-react';
 import { DemoBadge } from '../layout/DemoBadge';
+import { SafeImage } from '../common/SafeImage';
 
 interface PlaceDetailModalProps {
   place: Place | null;
@@ -24,26 +25,29 @@ export const PlaceDetailModal: React.FC<PlaceDetailModalProps> = ({
         className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden my-8 animate-in fade-in zoom-in-95 duration-150"
         role="dialog"
       >
-        {/* Image Header */}
+        {/* Image Header with SafeImage */}
         <div className="relative h-64 sm:h-72 w-full bg-slate-900">
-          <img
+          <SafeImage
             src={place.image}
             alt={place.name}
-            className="w-full h-full object-cover"
+            placeName={place.name}
+            category={place.category}
+            attribution={place.imageAttribution}
+            className="w-full h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent pointer-events-none" />
 
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white backdrop-blur-xs transition-colors cursor-pointer"
+            className="absolute top-4 right-4 p-2 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white backdrop-blur-xs transition-colors cursor-pointer z-20"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Header titles on image */}
-          <div className="absolute bottom-4 left-5 right-5 text-white">
-            <div className="flex items-center gap-2 mb-1.5">
+          <div className="absolute bottom-4 left-5 right-5 text-white z-10 pointer-events-none">
+            <div className="flex items-center gap-2 mb-1.5 flex-wrap">
               <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-600 text-white">
                 {place.category}
               </span>
@@ -59,8 +63,26 @@ export const PlaceDetailModal: React.FC<PlaceDetailModalProps> = ({
           </div>
         </div>
 
+        {/* Real Location Photograph Attribution Ribbon */}
+        {place.imageAttribution && (
+          <div className="bg-slate-100 px-5 py-2 border-b border-slate-200/80 text-[11px] text-slate-600 flex items-center justify-between gap-2 flex-wrap">
+            <div className="flex items-center gap-1.5 truncate">
+              <Camera className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+              <span className="font-semibold text-slate-700">Photo Attribution:</span>
+              <span className="truncate">
+                {place.imageAttribution.isPlaceholder
+                  ? 'Clean custom placeholder in lieu of unverified stock photos'
+                  : `${place.imageAttribution.author} • ${place.imageAttribution.license}`}
+              </span>
+            </div>
+            <span className="text-[10px] text-slate-400 font-mono">
+              {place.imageAttribution.source}
+            </span>
+          </div>
+        )}
+
         {/* Content body */}
-        <div className="p-6 space-y-6 max-h-[60vh] overflow-y-auto">
+        <div className="p-6 space-y-6 max-h-[55vh] overflow-y-auto">
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-3 gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
             <div>

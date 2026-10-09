@@ -3,6 +3,7 @@ import { Place } from '../../types';
 import { PUNE_PLACES } from '../../data/punePlaces';
 import { X, Check, Star, Shield, Accessibility, Train, Car, Plus, Sparkles, Trophy, Trash2, ArrowRight } from 'lucide-react';
 import { DemoBadge } from '../layout/DemoBadge';
+import { SafeImage } from '../common/SafeImage';
 
 interface ComparisonMatrixProps {
   comparedPlaces: Place[];
@@ -141,20 +142,23 @@ export const ComparisonMatrix: React.FC<ComparisonMatrixProps> = ({
                   {comparedPlaces.map((place) => (
                     <th key={place.id} className="p-4 min-w-[240px] align-top">
                       <div className="space-y-2">
-                        <div className="relative h-28 rounded-xl overflow-hidden bg-slate-100">
-                          <img
+                        <div className="relative h-28 rounded-xl overflow-hidden bg-slate-900">
+                          <SafeImage
                             src={place.image}
                             alt={place.name}
-                            className="w-full h-full object-cover"
+                            placeName={place.name}
+                            category={place.category}
+                            attribution={place.imageAttribution}
+                            className="w-full h-full"
                           />
                           <button
                             onClick={() => onRemovePlace(place.id)}
-                            className="absolute top-2 right-2 p-1.5 rounded-full bg-slate-900/70 hover:bg-rose-600 text-white transition-colors cursor-pointer"
+                            className="absolute top-2 right-2 p-1.5 rounded-full bg-slate-900/70 hover:bg-rose-600 text-white transition-colors cursor-pointer z-10"
                             title="Remove from comparison"
                           >
                             <X className="w-3.5 h-3.5" />
                           </button>
-                          <span className="absolute bottom-2 left-2 text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-slate-900/80 text-white backdrop-blur-xs">
+                          <span className="absolute bottom-2 left-2 text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-slate-900/80 text-white backdrop-blur-xs z-10 pointer-events-none">
                             {place.category}
                           </span>
                         </div>

@@ -28,6 +28,12 @@ export interface Place {
   bestTimeToVisit: string;
   highlights: string[];
   safetyTips: string[];
+  imageAttribution?: {
+    author: string;
+    license: string;
+    source: string;
+    isPlaceholder?: boolean;
+  };
 }
 
 export type ReportCategory = 'pothole' | 'lighting' | 'cleanliness' | 'safety' | 'transit' | 'other';

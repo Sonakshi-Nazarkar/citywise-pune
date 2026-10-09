@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e1b4b"/>
+        <stop offset="50%" stop-color="#312e81"/>
+        <stop offset="100%" stop-color="#0f172a"/>
+      </linearGradient>
+      <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fde047"/>
+        <stop offset="100%" stop-color="#ca8a04"/>
+      </linearGradient>
+    </defs>
+    <rect width="900" height="600" fill="url(#bg)"/>
+    <circle cx="450" cy="220" r="70" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M430 250 L430 195 L470 195 L470 250 M415 250 L485 250 M440 210 L460 210 M440 225 L460 225" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="450" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Hyatt Pune</text>
+    <text x="450" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#93c5fd" text-anchor="middle">5-Star Luxury Retreat • Kalyani Nagar</text>
+    <rect x="340" y="415" width="220" height="36" rx="18" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="450" y="438" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#fef08a" text-anchor="middle">★ Verified Place Profile</text>
+    <text x="450" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Clean placeholder shown in lieu of unverified stock photography</text>
+  </svg>

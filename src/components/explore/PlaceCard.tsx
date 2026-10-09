@@ -1,6 +1,7 @@
-import React from 'react';
+﻿import React from 'react';
 import { Place } from '../../types';
-import { Star, MapPin, Shield, Sparkles, Check, Plus, Layers, Train, Accessibility } from 'lucide-react';
+import { Star, MapPin, Shield, Check, Layers, Train, Accessibility } from 'lucide-react';
+import { SafeImage } from '../common/SafeImage';
 
 interface PlaceCardProps {
   place: Place;
@@ -31,23 +32,26 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
   };
 
   const getAffordabilitySigns = (score: number) => {
-    return '?'.repeat(Math.max(1, score));
+    return '₹'.repeat(Math.max(1, score));
   };
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col group">
-      {/* Image Banner */}
-      <div className="relative h-48 w-full overflow-hidden bg-slate-100">
-        <img
+      {/* Safe Image Banner with Fallback */}
+      <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+        <SafeImage
           src={place.image}
           alt={place.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          loading="lazy"
+          placeName={place.name}
+          category={place.category}
+          attribution={place.imageAttribution}
+          showAttributionBadge={true}
+          className="w-full h-full group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent pointer-events-none" />
 
         {/* Top Badges */}
-        <div className="absolute top-3 left-3 flex items-center gap-1.5">
+        <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10 pointer-events-none">
           <span
             className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs ${getCategoryBadgeClass(
               place.category
@@ -61,7 +65,7 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
         </div>
 
         {/* Bottom image overlay metadata */}
-        <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs">
+        <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs z-10 pointer-events-none">
           <div className="flex items-center gap-1 font-semibold text-amber-300">
             <Star className="w-3.5 h-3.5 fill-amber-300 inline" />
             <span>{place.userRating.toFixed(1)}</span>
